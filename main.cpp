@@ -12,19 +12,18 @@
 
 using namespace std;
 
-enum {
-     NPREF  =  2 ,           //前缀的个数
-     MAXGEN  =  10000  //最多有那么多个词
-};  
+
+     int NPREF  =  2;         //number of prefix
+     int MAXGEN  =  50000 ; //The max of the sentence
 
 typedef deque<string> Prefix; 
-map<Prefix,vector<string> > statetab; // 使用duque 作为第一项方便前缀词数扩展和改变，这里statetab将前缀和后缀关联起来
+map<Prefix,vector<string> > statetab; // combine prefix and suffix
 
-char  NONWORD[] = "\n"; //伪前缀，将真正的输入作为它的后缀
+char  NONWORD[] = " "; // initial prefix
 
 void add(Prefix &prefix, const string &s)
 {
-     if(prefix.size() == NPREF) //当前缀数目达到指定词数之后，改变前缀，也就是w1 w2 变成 w2 w3
+     if(prefix.size() == NPREF) // when number of prefix equal to NPREF ,W1,w2 change into w2，w3
      {
           statetab[prefix].push_back(s);
           prefix.pop_front();
@@ -32,7 +31,7 @@ void add(Prefix &prefix, const string &s)
      prefix.push_back(s);
 }
 
-void build(Prefix &prefix, istream &in)//构造统计表
+void build(Prefix &prefix, istream &in)//create statistics
 {
      string buf;
      while(in >> buf)
@@ -91,7 +90,7 @@ string readFileInfoString(char * filename)
     ostringstream buf;
     char ch;
     while(buf&&ifile.get(ch))
-    buf.put(ch);  //返回与流对象buf关联的字符串
+    buf.put(ch);  //return the string which combined with the buf
     return buf.str();
 }
 
@@ -105,7 +104,7 @@ int main()
 //    cout << "read: " << str << endl; 
 
 //     string sentence = "Show your flowchars and conceal your tables and I will be mystified. Show your tables and your flowcharts will be obvious. (end)";
-     istringstream in(str); //C++风格的串流的输入操作。
+     istringstream in(str); //input in C++ style 
      //freopen("mkov.txt","r",stdin);
      for(int i = 0; i < NPREF; i++)
           add(prefix,NONWORD);

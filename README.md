@@ -1,30 +1,34 @@
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+ ------------------------------------------------------------ 
 
 
-Hi there! Welcome to Cloud9 IDE!
+Hi there! Welcome to Markov Sentence Generator!
+Here I will tell some algorithm that we use in the project.
 
-To get you started with C/C++, we have created some small hello world
-applications and a Makefile.
+First, create a .txt document to save the origin content of sentence. 
 
-Have a look at the files, and use the terminal to build them:
+Second, define and use cin to input two prefix, this is the Markov Sentence prefix.
 
-    $ make
-    $ ./hello-c-world
-    $ ./hello-cpp-world
+Third, use two prefixs to search the content in the .txt, then if find out the word marked with these two prefixs(follow to these two words),
+this word will define as postfix. If marked with several words, use the random one as postfix.
 
-We're sure you can take it from there. Go ahead and edit the code, 
-or add some new files. It's all up to you! 
+Fourth, the sentence move, save the prefix 2 to the position of prefix 1, abandon the previous prefix 1, then save the postfix to the position of prefix 2.
 
-Happy coding!
-The Cloud9 IDE team
+Fifth, the sentence move away, until encounter a dot. The whole sentence has created.
+
+ ------------------------------------------------------------ 
+
+How to use it:
+
+firstly, write "g++ main.cpp" in the bash field;
+
+secondly, write "./a.out" in the bash field;
+
+after that , it will print "please input prefix 1:" you can input a word then Enter(eg: shall)
+
+then, it will print"please input prefix 2:" to ask you input another word(eg: be) and Enter;
+
+Finally, you can get the sentence witch begin with these two words from out prepared document.
+
 
 
 ## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
