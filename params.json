@@ -1,6 +1,6 @@
 {
   "name": "Markov-sentence-generator",
   "tagline": "",
-  "body": "### This is the project about Markov-sentence-generator\r\nMarkovian-tweets, due September 26th. Consume a text file with sentences and produce a tweet (< 145 characters) with the style of the input text. I see several layers of success in this project and encourage you to shoot for the level that best matches your team's abilities.<br>\r\nIf you do not know how to use it, you can see the 'README' in the 'View On Github' which includes how to use it and introduction about it.\r\n",
+  "body": "### This is the project about Markov-sentence-generator\r\nMarkovian-tweets, due September 26th. Consume a text file with sentences and produce a tweet (< 145 characters) with the style of the input text. I see several layers of success in this project and encourage you to shoot for the level that best matches your team's abilities.<br>\r\nIf you do not know how to use it, you can see the 'README' in the 'View On Github' which includes how to use it and introduction about it.<br>\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
