@@ -25,6 +25,33 @@
 <p>Markovian-tweets, due September 26th. Consume a text file with sentences and produce a tweet (&lt; 145 characters) with the style of the input text. I see several layers of success in this project and encourage you to shoot for the level that best matches your team's abilities.<br>
 If you do not know how to use it, you can see the 'README' in the 'View On Github' which includes how to use it and introduction about it.<br></p>
 
+<h3>
+<a id="what-i-learn-from-this-and-how-to-use-it" class="anchor" href="#what-i-learn-from-this-and-how-to-use-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What I learn from this and how to use it.</h3>
+
+<p>Hi there! Welcome to Markov Sentence Generator! Here I will tell some algorithm that we use in the project.</p>
+
+<p>First, create a .txt document to save the origin content of sentence.</p>
+
+<p>Second, define and use cin to input two prefix, this is the Markov Sentence prefix.</p>
+
+<p>Third, use two prefixs to search the content in the .txt, then if find out the word marked with these two prefixs(follow to these two words), this word will define as postfix. If marked with several words, use the random one as postfix.</p>
+
+<p>Fourth, the sentence move, save the prefix 2 to the position of prefix 1, abandon the previous prefix 1, then save the postfix to the position of prefix 2.</p>
+
+<p>Fifth, the sentence move away, until encounter a dot. The whole sentence has created.</p>
+
+<p>How to use it:</p>
+
+<p>firstly, write "g++ main.cpp" in the bash field;</p>
+
+<p>secondly, write "./a.out" in the bash field;</p>
+
+<p>after that , it will print "please input prefix 1:" you can input a word then Enter(eg: shall)</p>
+
+<p>then, it will print"please input prefix 2:" to ask you input another word(eg: be) and Enter;</p>
+
+<p>Finally, you can get the sentence witch begin with these two words from out prepared document.</p>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/superlll/Markov-Sentence-Generator">Markov-sentence-generator</a> is maintained by <a href="https://github.com/superlll">superlll</a>.</span>
 
